@@ -683,6 +683,7 @@ footer a:visited {
   font-weight: 900;
   margin-bottom: 40px;
   text-transform: lowercase;
+  color: white;
 }
 
 /* Timer Card (Task Input) */
