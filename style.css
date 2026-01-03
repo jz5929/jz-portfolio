@@ -91,7 +91,7 @@ main {
 
 /* Section Titles */
 .section-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   margin-bottom: 30px;
   text-align: left;
@@ -159,8 +159,7 @@ figcaption {
 .internships {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   padding-top: 60px;
   padding-bottom: 20px;
 }
@@ -180,6 +179,7 @@ figcaption {
   gap: 15px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .hover-box {
@@ -187,14 +187,12 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  max-width: 350px;
-  min-width: 200px;
+  flex: 0 0 auto;
 }
 
 .hover-box img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 280px;
+  height: 280px;
   border-radius: 8px;
   object-fit: cover;
   cursor: pointer;
@@ -211,8 +209,8 @@ figcaption {
   font-size: 0.95rem;
   color: #444;
   text-align: center;
-  min-height: 1.5em;
-  margin-bottom: 15px;
+  min-height: 1.3em;
+  margin-bottom: 10px;
   font-style: italic;
 }
 
@@ -223,9 +221,7 @@ figcaption {
   gap: 40px;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 30px auto 0;
-  width: 100%;
-  padding-bottom: 20px;
+  margin: 0 auto;
 }
 
 .card {
@@ -340,17 +336,15 @@ figcaption {
   flex-direction: row;
   gap: 30px;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .hobbies .image-block figure {
   text-align: center;
-  flex: 1;
-  max-width: 450px;
 }
 
 .hobbies .image-block img {
   width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -402,10 +396,10 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 15px 10px;
+  padding: 10px;
   font-size: 0.85rem;
   color: #666;
-  background-color: rgba(242, 242, 242, 0.95);
+  background-color: rgba(242, 242, 242, 0.9);
   z-index: 999;
 }
 
@@ -427,31 +421,7 @@ footer a:visited {
   color: #666;
 }
 
-/* Medium Screens */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .internship-images {
-    gap: 12px;
-  }
-  
-  .hover-box {
-    max-width: 250px;
-    min-width: 180px;
-  }
-  
-  .internship-cards {
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 30px;
-  }
-  
-  .card {
-    flex: 1;
-    min-width: 200px;
-    max-width: 300px;
-  }
-}
-
-/* Mobile Screens */
+/* Responsive Layout */
 @media (max-width: 768px) {
   body {
     overflow: visible;
@@ -514,27 +484,12 @@ footer a:visited {
 
   .image-block {
     align-items: center;
-    width: 100%;
-  }
-
-  .skills .image-block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .skills .image-block img{
-    max-width: 100%;
-    width: auto;
-    margin: 0 auto;
   }
 
   .internship-cards {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-bottom: 80px;
   }
 
   .card {
@@ -543,47 +498,17 @@ footer a:visited {
   }
 
   .internship-images {
-    flex-direction: row;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-
-  .hover-box{
-    flex: 1;
-    max-width: 80px;
-    min-width: 70px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hover-box img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-
-  .image-description {
-    font-size: 0.8rem;
-    min-height: 2em;
+    width: 280px;
+    height: 280px;
   }
 
   .hobbies .image-block {
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
-  }
-
-  .hobbies .image-block figure {
-    flex: 1;
-    max-width: 160px;
-  }
-
-  .hobbies .image-block img {
-    width: 100%;
-    height: auto;
-  }
-
-  .hobbies figcaption {
-    font-size: 0.75rem;
+    flex-direction: column;
   }
 
   .skill-item ul {
@@ -593,44 +518,6 @@ footer a:visited {
   footer {
     flex-direction: column;
     gap: 5px;
-  }
-}
-
-/* Very small mobile screens */
-@media (max-width: 480px) {
-  .internship-images {
-    gap: 5px;
-  }
-
-  .hover-box {
-    flex: 1;
-    max-width: 70px;
-    min-width: 60px;
-  }
-
-  .image-description {
-    font-size: 0.7rem;
-    min-height: 2.5em;
-  }
-
-  .hobbies .image-block figure {
-    max-width: 140px;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 375px) {
-  .internship-images {
-    gap: 4px;
-  }
-
-  .hover-box {
-    max-width: 60px;
-    min-width: 55px;
-  }
-
-  .image-description {
-    font-size: 0.65rem;
   }
 }
 
@@ -733,99 +620,16 @@ footer a:visited {
   justify-content: center;
   position: relative;
   transition: background 0.5s ease;
-  overflow: hidden;
-}
-
-.pomodoro-section::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(168, 181, 255, 0.3) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
 }
 
 .pomodoro-section.working {
-  background: linear-gradient(
-    45deg,
-    #fef3e2 0%,
-    #fae5c8 25%,
-    #f9d5a7 50%,
-    #fae5c8 75%,
-    #fef3e2 100%
-  );
-  background-size: 400% 400%;
-  animation: workingGradient 8s ease infinite;
-}
-
-.pomodoro-section.working::before {
-  opacity: 1;
-  animation: floatingCircle 10s ease-in-out infinite;
+  background: linear-gradient(135deg, #fef3e2 0%, #fae5c8 100%);
+  animation: pulse 3s ease-in-out infinite;
 }
 
 .pomodoro-section.break {
-  background: linear-gradient(
-    45deg,
-    #e3f2fd 0%,
-    #bbdefb 25%,
-    #90caf9 50%,
-    #bbdefb 75%,
-    #e3f2fd 100%
-  );
-  background-size: 400% 400%;
-  animation: breakGradient 6s ease infinite;
-}
-
-.pomodoro-section.break::before {
-  opacity: 1;
-  background: radial-gradient(circle, rgba(144, 202, 249, 0.4) 0%, transparent 70%);
-  animation: floatingCircle 12s ease-in-out infinite reverse;
-}
-
-@keyframes workingGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes breakGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes floatingCircle {
-  0% {
-    transform: translate(0%, 0%) scale(1) rotate(0deg);
-  }
-  25% {
-    transform: translate(10%, 10%) scale(1.1) rotate(90deg);
-  }
-  50% {
-    transform: translate(-5%, 15%) scale(1.2) rotate(180deg);
-  }
-  75% {
-    transform: translate(-10%, 5%) scale(1.1) rotate(270deg);
-  }
-  100% {
-    transform: translate(0%, 0%) scale(1) rotate(360deg);
-  }
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  animation: breathe 4s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -854,7 +658,8 @@ footer a:visited {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
   z-index: 0;
   pointer-events: none;
 }
@@ -863,6 +668,7 @@ footer a:visited {
   opacity: 1;
 }
 
+/* Make sure content is above video */
 .pomodoro-container {
   position: relative;
   z-index: 1;
@@ -943,8 +749,8 @@ footer a:visited {
 
 /* Timer Display */
 .timer-display-container {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
   padding: 60px 40px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -1080,7 +886,7 @@ footer a:visited {
   font-size: 12rem;
   color: #111;
   text-transform: lowercase;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.02em;
   margin: 0;
   position: relative;
   z-index: 1;
@@ -1088,7 +894,7 @@ footer a:visited {
 
 .signature {
   font-family: 'Amsterdam', cursive;
-  font-size: 2.8rem;
+  font-size: 10rem;
   color: #dc143c;
   position: absolute;
   top: 50%;
@@ -1141,7 +947,7 @@ footer a:visited {
   }
 
   .signature {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   .home-footer {
